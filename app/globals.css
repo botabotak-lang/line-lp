@@ -1,3 +1,39 @@
 @import "tailwindcss";
 
+@theme {
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 実績バナーの隙間を完全に排除するためのリセット（指示通りの完全版） */
+.achievement-banner-wrapper {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+    background-color: transparent !important;
+    display: block !important;
+    overflow: visible !important; /* 強制クロップを解除 */
+}
+
+.achievement-banner-wrapper img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important; /* 無理に切り取らず全体を表示 */
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
 
